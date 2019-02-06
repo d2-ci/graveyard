@@ -17,5 +17,5 @@ REPO_NAME=$(echo "${REPO_URL}" | sed -n "s/^.*dhis2\/\(.*\)\.git$/\1/p")
 
 git clone "$REPO_URL" "tmp/${REPO_NAME}"
 tar czfv "graves/${REPO_NAME}.tgz" "tmp/${REPO_NAME}"
-git add "${REPO_NAME}.tgz"
+git add "graves/${REPO_NAME}.tgz"
 git commit -m "chore: archive repo ${REPO_NAME}"
